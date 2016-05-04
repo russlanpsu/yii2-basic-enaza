@@ -37,8 +37,6 @@ class Feedback extends \yii\db\ActiveRecord
             [['topic_id'], 'integer'],
             [['msg'], 'string', 'max' => 1000],
             [['file_name'], 'string', 'max' => 255],
-//          [['file'], 'file'],
-//          [['file'], 'file', 'extensions' => 'png, jpg'],   // с расширением не работает почему-то
             [
                 ['file'], 'file', 'skipOnEmpty' => true,
                 'mimeTypes' => 'image/png text/plain application/pdf image/gif image/jpeg'
@@ -53,8 +51,8 @@ class Feedback extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'topic' => 'Topic',
-            'msg' => 'Msg',
+            'topic' => 'Тема',
+            'msg' => 'Сообщение',
             'file' => 'Прикрепить файл',
 //            'file_name' => 'File Name',
         ];
